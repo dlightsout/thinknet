@@ -1,33 +1,17 @@
-require 'mathn'
-
 print "Enter number a:"
-a = gets.chomp.to_f
-
+a = gets.to_f
 print "Enter number b:"
-b = gets.chomp.to_f
-
+b = gets.to_f
 print "Enter number c:"
-c = gets.chomp.to_f
+c = gets.to_f
+
+discrminant = b**2 - 4 * a * c
 
 
-
-
-formula = b**2 - 4 * a * c
-
-
-
-x_1 = (-b + Math.sqrt(formula)) / (2 * a)
-
-x_2 = (-b - Math.sqrt(formula)) / (2 * a)
-
-
-
-
-if formula < 0 
-  puts "D = #{formula}, Корней нет"
-elsif formula > 0
-  puts "D = #{formula}, x1= #{x_1} x2= #{x_2} "
+if discrminant < 0 
+  puts "D = #{discrminant}, Корней нет"
+elsif discrminant > 0
+  puts "D = #{discrminant}, x1= #{(-b + Math.sqrt(discrminant)) / (2 * a)} x2= #{(-b - Math.sqrt(discrminant)) / (2 * a)} "
 else
-  puts "D = #{formula}, x = #{x_1}"
+  puts "D = #{discrminant}, x = #{-b / (2 * a)}"
 end
-  

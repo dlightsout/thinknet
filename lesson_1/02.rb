@@ -1,8 +1,8 @@
 print "Enter the height of triangle: "
-h= gets.to_i
+h= gets.to_f
 
 print "Enter the base of triangle: "
-a = gets.to_i
+a = gets.to_f
 
 area_tri = 0.5 * h * a
 
