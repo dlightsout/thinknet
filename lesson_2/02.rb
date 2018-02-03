@@ -2,16 +2,14 @@ arr = []
 
 # first variant
  i = 5
-loop do 
+while true  
   i +=5
-  arr.push[i]
+  arr << i
   break if i == 100
 end
  
 #second variant 
-for p in 10..100
-  if p % 5 == 0
-    arr.push p
-  end
+(10..100).each do |i|
+  arr << i if i % 5 == 0
 end
 

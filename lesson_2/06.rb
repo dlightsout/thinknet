@@ -1,5 +1,5 @@
 cart = {}
-while true
+loop do 
   puts "name of purchase(type stop, if you want to stop): "
   purchase = gets.chomp
   break if purchase == "stop"
