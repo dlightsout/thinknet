@@ -1,8 +1,6 @@
 arr = [1, 1]
 
-while true
- fibonachi = arr[-1] + arr[-2] 
-  break if fibonachi > 100
+while (fibonachi = arr[-1] + arr[-2]) < 100
   arr << fibonachi
 end
 
