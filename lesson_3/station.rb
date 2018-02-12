@@ -3,29 +3,19 @@ class Station
 
   def initialize(name)
     @name = name
-    @trains = {} 
+    @trains = [] 
   end
   
   def add_train(train)
     @trains << train
   end
-  
-  # haven"t finished yet
+
   def type_trains(type)
-    @trains.each_value do |i|  
-      sum = 0
-      if i == type
-        sum += 1
-      end
-      puts "We have #{sum} of #{i} train"
-    end
+    @trains.select {|i| i = type}
+  end 
 
-  end  
-
-  def send_train(train)
+  def delete_train(train)
     @trains.delete(train)
   end
 
-  def set_route
-  end
 end

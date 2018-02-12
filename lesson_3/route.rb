@@ -1,17 +1,17 @@
 class Route 
-  attr_reader :from, :to, :whole_route
+  attr_reader :from, :to, :stations
+  
   def initialize(from, to)
-    @from = from
-    @to = to 
-    @whole_route = [from, to]
+    @stations = [from, to]
+    @name = "#{from.name} to #{to.name} "
   end
 
   def add_station(name)
-    @whole_route.insert(-2, name) 
+    @stations.insert(-2, name) 
   end
 
-  def delete_temporory(station)
-    @whole_route.delete(station)
+  def delete_station(station)
+    @stations.delete(station)
   end
 
 end

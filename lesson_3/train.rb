@@ -1,16 +1,13 @@
 class Train
-attr_accessor :speed, :carriage 
-attr_reader :number, :type, 
-  
+attr_reader :speed, :number_carriage, :number, :type, :route
 
   def initialize(number, type, carriage, speed = 0 )
     @number = number
     @type = type
-    @carriage = carriage
-
+    @number_carriage = carriage
   end
 
-  def speed
+  def speed_up
     self.speed += 5 
   end
 
@@ -19,11 +16,11 @@ attr_reader :number, :type,
   end
 
   def add_carriage
-    self.carrage += 1 if speed == 0 
+    self.number_carriage += 1 if speed == 0 
   end
 
   def delete_carriage
-    self.carrage -= 1 if speed == 0 && carriage > 0
+    self.number_carriage -= 1 if speed == 0 && carriage > 0
   end
 
 ## эту чвсть не особо понимаю, скопировал
@@ -33,8 +30,9 @@ attr_reader :number, :type,
     end
     @route_index = 0
     @route = route
-    current_station.add_train(self)
+    current_station.add_train(self) # как селф работает , он вызывает метод с роут? 
   end
+  
   def forward
     if current_station == @route.stations.last
       puts "Вы на конечной станции"
