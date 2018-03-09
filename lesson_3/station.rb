@@ -10,12 +10,16 @@ class Station
     @trains << train
   end
 
-  def type_trains(type)
-    @trains.select {|i| i = type}
+  def list_of_trains_by_type(train_type)
+    @trains.select {|train| train.type.to_s == train_type}
   end 
 
-  def delete_train(train)
+  def send_train(train)
     @trains.delete(train)
   end
-
 end
+
+
+
+
+
